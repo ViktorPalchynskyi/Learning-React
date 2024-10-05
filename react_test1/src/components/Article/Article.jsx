@@ -1,4 +1,5 @@
 import { Button } from '../Button/Button';
+import styles from './styles.module.scss';
 
 export function Article() {
     return (
@@ -10,16 +11,34 @@ export function Article() {
                 voluptatum quos labore assumenda mollitia magni?
                 Maxime eos architecto sequi voluptatum.
             </p>
-            <Button onClick={() => console.log('Updated')} disabled type={'secondary'}>
+            <Button
+                onClick={() => console.log('Updated')}
+                disabled
+                type={'secondary'}
+                className={styles.updateAction}
+            >
                 Update
             </Button>
-            <Button onClick={() => console.log('Deleted')} disabled type={'primary'}>
+            <Button
+                onClick={() => console.log('Deleted')}
+                disabled
+                type={'primary'}
+                className={styles.deleteAction}
+            >
                 Delete
             </Button>
-            <Button onClick={() => console.log('Updated')} type={'secondary'}>
+            <Button
+                onClick={() => console.log('Updated')}
+                type={'secondary'}
+                className={styles.updateAction}
+            >
                 Update
             </Button>
-            <Button onClick={() => console.log('Deleted')} type={'primary'}>
+            <Button
+                onClick={() => console.log('Deleted')}
+                type={'primary'}
+                className={styles.deleteAction}
+            >
                 Delete
             </Button>
         </>
