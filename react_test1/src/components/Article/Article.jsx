@@ -10,10 +10,16 @@ export function Article() {
                 voluptatum quos labore assumenda mollitia magni?
                 Maxime eos architecto sequi voluptatum.
             </p>
-            <Button onClick={() => console.log('Updated')}>
+            <Button onClick={() => console.log('Updated')} disabled type={'secondary'}>
                 Update
             </Button>
-            <Button onClick={() => console.log('Deleted')}>
+            <Button onClick={() => console.log('Deleted')} disabled type={'primary'}>
+                Delete
+            </Button>
+            <Button onClick={() => console.log('Updated')} type={'secondary'}>
+                Update
+            </Button>
+            <Button onClick={() => console.log('Deleted')} type={'primary'}>
                 Delete
             </Button>
         </>
