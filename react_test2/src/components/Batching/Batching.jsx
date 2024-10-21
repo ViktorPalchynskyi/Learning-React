@@ -1,11 +1,12 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useId, useState } from 'react';
 
 export function Batching() {
     const [isFetching, setFetching] = useState(false);
     const [error, setError] = useState(false);
     const [formStatus, setFormStatus] = useState('');
+    const id = useId();
 
     async function handleClick() {
         fetch('/someting').then(() => {
@@ -23,6 +24,7 @@ export function Batching() {
             <p>error {error}</p>
             <p>formStatus {formStatus}</p>
             <button onClick={handleClick}>Click me</button>
+            <p>ID = {id}</p>
         </div>
     );
 }
